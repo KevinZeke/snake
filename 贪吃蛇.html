@@ -67,6 +67,7 @@ window.onload=function()
 	    headX,
 	    headY,
 	    keyC=0;
+	//遮罩开始
 	oStart.style.left=oGame.offsetLeft+"px";
 	oStart.style.top=oGame.offsetTop+"px";
 	Random(oGame);
@@ -83,7 +84,7 @@ window.onload=function()
 		var oEvent=ev||event;
 		var o=keyC;
 		keyC=oEvent.keyCode;
-		//TODO:避免反向按键导致蛇重叠命令失败 , 存在bug ,需要重写.
+		//TODO:避免反向按键导致蛇重叠命令失败 , 目前存在bug ,需要重写.
 		if(Math.abs(oEvent.keyCode-o)!=2||oEvent.keyCode==o)
 		{
 			o=oEvent.keyCode;
